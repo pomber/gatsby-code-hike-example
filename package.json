@@ -1,36 +1,24 @@
 {
-  "name": "using-mdx",
+  "name": "codehike-gatsby",
   "private": true,
-  "description": "Showing how to use MDX in Gatsby",
   "version": "0.0.1",
-  "author": "LekoArts",
   "dependencies": {
+    "@code-hike/mdx": "^0.7.2",
     "@mdx-js/react": "^2.1.2",
-    "@nivo/core": "0.78.0",
-    "@nivo/line": "0.78.0",
     "@sindresorhus/slugify": "^1",
     "gatsby": "mdxv4-rc",
     "gatsby-plugin-mdx": "mdxv4-rc",
-    "gatsby-plugin-sharp": "next",
-    "gatsby-remark-images": "mdxv4-rc",
     "gatsby-source-filesystem": "next",
     "mdast-util-to-string": "^2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reading-time": "^1.5.0",
-    "remark-gfm": "^1",
-    "remark-unwrap-images": "^2",
     "unist-util-visit": "^2"
   },
-  "devDependencies": {
-    "prettier": "^2.7.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "start": "gatsby develop",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve",

@@ -1,8 +1,10 @@
+const { remarkCodeHike } = require("@code-hike/mdx");
+const theme = require("shiki/themes/github-dark.json");
+
 module.exports = {
   siteMetadata: {
-    title: `Using MDX example`,
-    description: `Kick off your next, great Gatsby project with MDX.`,
-    author: `@pragmaticpat`,
+    title: `Code Hike + Gatsby`,
+    description: `Code Hike and Gatsby example`,
   },
   plugins: [
     {
@@ -13,31 +15,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/content/posts/`,
-      },
-    },
-    `gatsby-plugin-sharp`,
-    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         mdxOptions: {
-          remarkPlugins: [
-            require(`remark-gfm`),
-            require(`remark-unwrap-images`),
-          ],
+          remarkPlugins: [[remarkCodeHike, { theme }]],
         },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 690,
-            },
-          },
-        ],
       },
     },
   ],
-}
+};
